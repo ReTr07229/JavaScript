@@ -1,0 +1,43 @@
+Manipulação de Variáveis e Constantes
+
+No JS existem três tipos de “variáveis”(var, let e const), onde dois desses tipos são variáveis de fato(var e let), o tipo restante é uma constante que é declarada no código. 
+
+Diferença de var e let
+
+Var
+Variável padrão, basicamente esse comando é usado para marcar que a variável criada não tem nenhum efeito especial, sendo opcional chamar esse código, pois ao criar uma variável sem marcar nada na frente(estilo python) irá declarar por padrão que é var.
+
+Exemplo:
+//No caso ambas estão certas e estão funcionando no programa
+var nome = "Luiz"
+
+//Mas é uma boa prática nomear qual é o tipo de variavel na frente(var, let, const)
+sobrenome = "Henrique"
+
+Sendo uma boa prática pois isso ajuda a identificar o escopo da variável e futuramente evitar erros.
+
+Let
+Outro tipo de variável, porém neste caso limita que a variável só pode ser manipulada, caso esteja no mesmo bloco de código que se equivale as chaves({}) ou o algoritmo dentro de alguns operadores condicionais e lógicos como if, else, while, for e etc.
+
+Exemplo:
+if (condicao) {
+    let variavel = 'valor';
+}
+
+console.log(variavel) // Saída = Error: undefined
+if (condicao2) {
+    let variavel2 = 'Olá mundo!'
+    console.log(variavel2); // Saída = Olá mundo!
+}
+
+
+Const
+Agora o const é diferente, ele se propõe ser um valor imutável, ou seja constante, caso durante a execução do código haja uma tentativa de mudança de valores, o programa para e mostra mensagem de erro, lembrando que é sempre recomendado nomear uma constante com letras maiúsculas(CAPS LOCK ativado), pois é outra boa prática de programação para diferenciá-lo durante o desenvolvimento do código de variáveis.
+	
+	Exemplo:
+const NOME = "Luiz"
+
+var nome_completo = NOME + "Lima"; // Sem Problemas
+
+NOME = "Luiz Lima" // Aqui já apresentará erro, por ser constante
+
